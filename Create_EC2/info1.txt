@@ -1,0 +1,35 @@
+Install AWS terraform using 
+
+https://developer.hashicorp.com/terraform/downloads
+
+Install AWS CLI
+
+https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+
+Configure AWS to terminal
+
+$aws configure
+$provide access key
+$ provide access key passed
+Test using the command
+$aws s3 ls
+
+Create EC2 Instance using TF
+
+$Create a sample.tf file with the provider name 
+And resource
+$ Clone the directory and open in vs code terminal
+$ terraform init # Initialize terraform
+$ terraform plan # like a dry-run, shows what is created using the file
+$ terraform apply
+An EC2 instance is created.
+$ Added .tfstate and .backup file to .gitignore
+.tfstate is a file that records all terraform infrastructure details
+To delete the created infra
+$terraform destroy
+
+Hence the Lifecycle of terraform is 
+$terraform init
+$terraform plan
+$terraform apply
+$terraform destroy
