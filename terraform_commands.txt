@@ -1,0 +1,15 @@
+terraform show #shows ec2_instances
+terraform init #initializes the terraform
+terraform plan #shows the planning of the resources to deploy
+terraform apply -auto-approve #applies the terraform, -auto-approve is to eliminate yes
+terraform destroy -auto-approve #destroys the terraform, -auto-approve is to eliminate yes 
+terraform apply -var-file=stage.tfvars # Loads a new .tfvars instead of default one
+terraform workspace new dev #Create a workspace in terraform called "dev"
+terraform workspace select dev #Switched to workspace called "dev"
+terraform workspace show # shows which workspace we are in
+
+
+
+Notes: 
+1) whenever a tfvars is created in the same terraform, it updates the terraform
+not changes it
