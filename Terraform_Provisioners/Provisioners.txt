@@ -1,0 +1,9 @@
+In Terraform, provisioners are used to perform actions on a resource after it's created or destroyed. Provisioners are primarily used for tasks like bootstrapping, configuration management, and other post-deployment activities. Terraform supports various types of provisioners:
+
+    Local-Exec Provisioner: The local-exec provisioner allows you to run arbitrary commands on your local machine, typically used for tasks like running shell scripts or local configuration after resource creation.
+
+    Remote-Exec Provisioner: The remote-exec provisioner allows you to execute scripts or commands on the resource itself via SSH or WinRM. It's commonly used for tasks like configuring a virtual machine, installing software, or performing setup tasks on a remote server.
+
+    File Provisioner: The file provisioner is used to copy files or directories from your local machine to a remote resource after it's created. This is often used to transfer configuration files or other assets.
+
+    Connection Block: The connection block is used to configure the SSH or WinRM connection parameters for resources. It's not strictly a provisioner, but it's related to provisioning in terms of connecting to remote resources.
