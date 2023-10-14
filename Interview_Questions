@@ -1,0 +1,47 @@
+1. **What is Terraform, and how does it differ from other infrastructure as code tools like Ansible or Puppet?**
+   
+   - Terraform is an open-source infrastructure as code (IAC) tool designed for provisioning and managing infrastructure resources. Unlike Ansible or Puppet, which focus on configuration management, Terraform is focused on creating and managing infrastructure resources across various cloud providers and platforms. It allows you to declare the desired state of your infrastructure in code and automatically manages the provisioning and changes.
+
+2. **Explain the key components of a Terraform configuration file.**
+   
+   - A Terraform configuration file typically consists of:
+     - Providers: The cloud or platform where resources will be created.
+     - Resources: Infrastructure components (e.g., EC2 instances, VPCs).
+     - Variables: Input values that can be customized for different environments.
+     - Outputs: Values that can be displayed after a successful apply.
+     - Data Sources: Retrieve information from existing resources.
+
+3. **What are Terraform modules, and why are they useful?**
+   
+   - Terraform modules are reusable, encapsulated collections of resources and configurations. They allow you to define infrastructure components once and reuse them across different projects and environments. Modules enhance code reusability, maintainability, and help promote best practices.
+
+4. **What is the "Terraform state," and why is it important?**
+   
+   - Terraform state is a crucial component that stores the current state of the infrastructure being managed. It is used to keep track of which resources have been created and their attributes. State files are used to plan and apply changes in a safe and predictable manner.
+
+5. **What is the difference between `terraform init`, `terraform plan`, and `terraform apply`?**
+   
+   - `terraform init`: Initializes a Terraform configuration by downloading the necessary providers and modules.
+   - `terraform plan`: Creates an execution plan that shows the changes Terraform will make to achieve the desired state.
+   - `terraform apply`: Applies the changes proposed by the plan, creating or modifying resources.
+
+6. **Explain how Terraform handles dependency management among resources.**
+   
+   - Terraform automatically handles resource dependencies. It creates resources in the correct order to satisfy dependencies, ensuring that dependent resources are created or modified before the dependent ones.
+
+7. **What is "tfstate" locking, and why is it important in a collaborative environment?**
+   
+   - Terraform state locking prevents concurrent modifications to the same state file by multiple users. It's essential in a collaborative environment to prevent conflicts and maintain consistency in infrastructure management.
+
+8. **How can you manage sensitive data, such as passwords or API keys, in Terraform configurations?**
+   
+   - Sensitive data can be managed using Terraform variables. It's recommended to store sensitive data in environment variables or use secret management tools like HashiCorp Vault and reference them in your configurations.
+
+9. **Explain the purpose of Terraform workspaces.**
+   
+   - Terraform workspaces provide a way to manage multiple environments (e.g., development, staging, production) within the same configuration. Each workspace can have its state, variables, and resources, allowing you to maintain separate configurations for different stages.
+
+10. **What is "remote state" in Terraform, and why would you use it?**
+   
+    - Remote state is the practice of storing your Terraform state files in a shared, remote location such as an S3 bucket or Terraform Cloud. It helps with collaboration, state locking, and ensuring that state is accessible from multiple locations.
+
