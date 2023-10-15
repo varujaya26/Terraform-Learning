@@ -81,6 +81,8 @@ $vault write auth/approle/role/terraform \
 To create RoleID and password:
 
 $vault read auth/approle/role/terraform/role-id
+
+
 $ vault write -f auth/approle/role/terraform/secret-id
 
 Write the Terraform script.
